@@ -1,0 +1,28 @@
+// Fonts mixin
+font-url(file)
+  return '../assets/fonts/' + file
+
+webfont(family, file, hack-chrome-windows = false, weight = 'normal')
+  @font-face
+    font-family family
+    src url(font-url(file + '.eot'))
+    src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
+        url(font-url(file + '.woff')) format('woff'),
+        url(font-url(file + '.ttf')) format('truetype'),
+        url(font-url(file + '.svg#'+ family)) format('svg')
+    font-weight weight
+    font-style normal
+  if hack-chrome-windows
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+      @font-face
+        font-family family
+        src url(font-url(file + '.svg#'+ family)) format('svg')
+
+webfont('Lineto', 'lineto-circular-pro-book', false, 400)
+webfont('Lineto', 'lineto-circular-pro-black', false, 600)
+
+$lineto = 'Lineto', sans-serif
+$lineto--regular = 400
+$lineto--bold = 600
+
+$font-family = $lineto
