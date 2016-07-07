@@ -1,0 +1,14 @@
+{
+  "name": "casumo",
+  "version": "1.0.0",
+  "description": "The only dependency in this project it's pug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jose Luis Vizcaíno",
+  "license": "ISC",
+  "devDependencies": {
+    "pug": "^2.0.0-beta3"
+  }
+}
