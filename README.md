@@ -5,5 +5,5 @@ Hey guys, it's Jose. I'm going to create a nice scalable and modular CSS archite
 ## How to build
 Commands:
   `npm install` - install dependencies
-  `pug src/pug/index.pug -o ./src/ -w` - compile layout and watch for new changes
-  `stylus src/stylus/main.styl -o src/css -m -w` - compile stylus and watch for new changes, generating sourcemaps
+  `pug src/pug/index.pug -o ./src/` - compile layout and watch for new changes
+  `stylus src/stylus/main.styl -o src/css -m` - compile stylus and watch for new changes, generating sourcemaps
