@@ -5,5 +5,5 @@ Hey guys, it's Jose. I'm going to create a nice scalable and modular CSS archite
 ## How to build
   `npm install stylus -g` - if you don't have Stylus installed, you should for compiling this project
   `npm install` - install dependencies
-  `pug src/pug/index.pug -o ./src/` - compile layout
+  `pug src/modules/index.pug -o ./src/` - compile layout
   `stylus src/stylus/main.styl -o src/css -m` - compile stylus, generating sourcemaps
