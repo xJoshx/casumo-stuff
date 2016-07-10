@@ -9,21 +9,27 @@
   flex-flow row
   justify-content space-between
   width 100%
+  margin-bottom 100px
 
 .footer-region
 .footer-social
   display flex
   flex-flow row
   width 280px
+  padding 0
 
 .footer-region__item
 .footer-social__item
   margin-left 15px
+  &:first-child
+    margin-left 0
 
 .footer-links
   display flex
   flex-wrap wrap
   width 350px
+  margin-bottom 75px
+  padding 0
 
 .footer-links__item
   flex 1 0 50%
@@ -31,6 +37,10 @@
 
 .footer-legal
   display flex
+  margin-bottom 50px
+  padding-top 45px
+  border-top 5px solid $footer__border--legal
+  box-sizing border-box
 
 .footer-legal__logos
   margin-right 55px
