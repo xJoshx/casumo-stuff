@@ -1,0 +1,80 @@
+@import "../../stylus/global/mixins/absolute-center"
+
+.sidebar
+  background $sidebar__background
+  color $sidebar__text
+  height 900px
+  width 200px
+  position relative
+  float left
+  z-index 2
+
+.sidebar-header
+  height 100px
+  background-color $sidebar__background-header
+  position relative
+
+.sidebar-header__logo
+  absolute-center()
+
+.sidebar-header__subtitle
+  display block
+  position absolute
+  margin 0 auto
+  right 0
+  left 0
+  bottom 0
+  width 35px
+
+.sidebar-logo
+  height 100px
+  position relative
+
+.sidebar-logo__img
+  absolute-center()
+  width 50px
+  height 50px
+
+.sidebar-navigation
+  list-style-type none
+  font-size 14px
+  margin-bottom 50px
+
+.sidebar-navigation__item
+  margin-bottom 10px
+  cursor pointer
+  &.selected
+    text-decoration underline
+
+.sidebar-actions
+  height 50px
+  margin-bottom 50px
+
+.sidebar-actions__search
+.sidebar-actions__archive
+  width 50%
+  display inline-block
+  position relative
+  button.search
+  button.archive
+    width 25px
+    height 25px
+    absolute-center()
+
+.sidebar-ads__tuhoa
+.sidebar-ads__miami
+  height 100px
+  width 100%
+
+.sidebar-ads__empty
+  height 190px
+  width 100%
+
+.sidebar-ads__tuhoa
+  background-color $sidebar-ads__background--tuhoa
+
+.sidebar-ads__miami
+  background-color $sidebar-ads__background--miami
+
+.sidebar-ads__empty
+  background-color $sidebar-ads__background--empty
