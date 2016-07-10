@@ -2,7 +2,7 @@
 font-url(file)
   return '../assets/fonts/' + file
 
-webfont(family, file, hack-chrome-windows = false, weight = 'normal')
+webfont(family, file, hack-chrome-windows = false, weight = 'normal', style='normal')
   @font-face
     font-family family
     src url(font-url(file + '.eot'))
@@ -11,7 +11,7 @@ webfont(family, file, hack-chrome-windows = false, weight = 'normal')
         url(font-url(file + '.ttf')) format('truetype'),
         url(font-url(file + '.svg#'+ family)) format('svg')
     font-weight weight
-    font-style normal
+    font-style style
   if hack-chrome-windows
     @media screen and (-webkit-min-device-pixel-ratio:0)
       @font-face
