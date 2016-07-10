@@ -1,7 +1,7 @@
 {
   "name": "casumo",
   "version": "1.0.0",
-  "description": "The only dependency in this project it's pug",
+  "description": "The only dependencies in this project are pug and normalize.css",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "pug": "^2.0.0-beta3"
+  },
+  "dependencies": {
+    "normalize-styl": "^3.0.3"
   }
 }
