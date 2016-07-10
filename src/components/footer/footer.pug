@@ -1,0 +1,41 @@
+- var logoLegal1 = 'http://placepu.gs/110/60'
+- var logoLegal2 = 'http://placepu.gs/110/60'
+
+- var placeholderFooterLogos = ['http://placepu.gs/40/15', 'http://placepu.gs/40/15', 'http://placepu.gs/40/15', 'http://placepu.gs/40/15', 'http://placepu.gs/40/15', 'http://placepu.gs/40/15', 'http://placepu.gs/40/15', 'http://placepu.gs/40/15', 'http://placepu.gs/40/15']
+
+- var placeholdersFooterRegion = ['http://placepu.gs/35/35', 'http://placepu.gs/35/35', 'http://placepu.gs/35/35', 'http://placepu.gs/35/35', 'http://placepu.gs/35/35']
+
+- var placeholdersFooterSocial = ['http://placepu.gs/35/35', 'http://placepu.gs/35/35', 'http://placepu.gs/35/35', 'http://placepu.gs/35/35', 'http://placepu.gs/35/35']
+
+- var footerLinks = ['Casumo home', 'Work at Casumo', 'About us', 'Affiliates', 'Play Okay', 'Contact us', 'FAQ', 'Terms & conditions']
+
+- var legalText = 'Ribeye swine bacon porchetta venison. Cow bresaola leberkas, tenderloin ball tip kevin capicola short ribs strip steak pork chop salami doner jerky bacon landjaeger. Boudin leberkas beef ribs, rump tri-tip capicola beef alcatra ribeye cupim picanha shank jerky ground round filet mignon. Boudin bresaola kielbasa flank t-bone hamburger pork belly sirloin. Spare ribs boudin shankle ham hock landjaeger shoulder fatback capicola alcatra prosciutto bacon tri-tip.'
+
+footer.footer
+  .wrapper-region-social
+    ul.footer-region
+      each val, index in placeholdersFooterRegion
+        li.footer-region__item
+          img(src="" + val, alt="Logo region " + index)
+
+    ul.footer-social
+      each val, index in placeholdersFooterSocial
+        li.footer-social__item
+          img(src="" + val, alt="Logo social " + index)
+
+  ul.footer-links
+    each val in footerLinks
+      li.footer-links__item
+        a(href="#") #{val}
+
+  .footer-legal
+    .footer-legal__logos
+      img(src="" + logoLegal1, alt="Logo legal 1")
+      img(src="" + logoLegal2, alt="Logo legal 2")
+
+    .footer-legal__text #{legalText}
+
+  ul.footer-payment-logos
+    each val, index in placeholderFooterLogos
+      li.footer-payment-logos__item
+        img(src="" + val, alt="Footer logo " + index)
