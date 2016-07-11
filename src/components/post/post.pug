@@ -1,13 +1,18 @@
 .post
-  .post__title #{title}
-
   .post-info
-    .post-info__tags
-      a(href="#") News,
-      a(href="#") Challenge,
-      a(href="#") Tech,
-      a(href="#") New Features
-    .post-info__date 47 minutes ago
+    .post-info__title #{title}
+
+    .post-tags-date
+      .post-tags-date__tags
+        a(href="#") News,
+        a(href="#") Challenge,
+        a(href="#") Tech,
+        a(href="#") New Features
+      .post-tags-date__date 47 minutes ago
+
+  .post-social
+    button.facebook
+    button.twitter
 
   .post__image
     img(src="" + image, alt="Post image")

@@ -1,3 +1,7 @@
+$additionalPaddingForContent = 50px
+$facebookIcon = 'http://placepu.gs/10/20'
+$twitterIcon = 'http://placepu.gs/22/16'
+
 .post
   background-color $post__background
   box-sizing border-box
@@ -7,20 +11,44 @@
   position relative
   width 78.5%
 
-.post__title
+.post-info
+  float left
+  padding-left $additionalPaddingForContent
+
+.post-social
+  float right
+  padding-right $additionalPaddingForContent
+  display flex
+  button
+    &:first-child
+      margin-right 10px
+
+button.facebook
+  background url($facebookIcon) center center no-repeat
+  background-size cover
+  width 25px
+  height 25px
+
+button.twitter
+  background url($twitterIcon) center center no-repeat
+  background-size cover
+  width 25px
+  height 25px
+
+.post-info__title
   font-size 24px
   margin-bottom 15px
 
-.post-info
+.post-tags-date
   margin-bottom 25px
   color $post__subtitle
 
-.post-info__tags
-.post-info__date
+.post-tags-date__tags
+.post-tags-date__date
   display inline-block
   position relative
 
-.post-info__tags
+.post-tags-date__tags
   padding-right 10px
   a
     margin-right 5px
@@ -32,7 +60,7 @@
     position absolute
     right 0
 
-.post-info__date
+.post-tags-date__date
   padding-left 5px
 
 .post__image
@@ -44,10 +72,12 @@
 
 .post__body
   margin 0 auto
-  width 530px
+  min-width 530px
+  padding-left $additionalPaddingForContent
 
 .post__link
   bottom 100px
   color $post__link
-  left 100px
+  left $additionalPaddingForContent + 50px
+  left $additionalPaddingForContent + 50px
   position absolute
