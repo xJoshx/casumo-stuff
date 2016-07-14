@@ -27,6 +27,23 @@ casumoActions.prototype.listenToClicksBlur = function (toggleFunction) {
   blur.addEventListener('click', toggleFunction)
 }
 
+casumoActions.prototype.scrollEffect = function (event) {
+
+  window.addEventListener('scroll', function () {
+    var top  = window.pageYOffset || document.documentElement.scrollTop,
+    sidebarItems = document.getElementById('sidebar-scroll-effect'),
+    sidebar = document.getElementById('sidebar'),
+    sidebarHeight = 900
+
+    if (top < 590) {
+      var translate = 'translateY(-' + top + 'px)'
+      sidebarItems.style.transform = translate
+      sidebar.style.height = sidebarHeight - top + 'px'
+    }
+  })
+}
+
 var casumoActions = new casumoActions()
 
 casumoActions.listenToClicksBlur(casumoActions.toggleSidebar)
+casumoActions.scrollEffect()
