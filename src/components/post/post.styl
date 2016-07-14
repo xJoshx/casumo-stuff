@@ -1,6 +1,4 @@
 $additionalPaddingForContent = 50px
-$facebookIcon = 'http://placepu.gs/10/20'
-$twitterIcon = 'http://placepu.gs/22/16'
 
 .post
   background-color $post__background
@@ -23,17 +21,17 @@ $twitterIcon = 'http://placepu.gs/22/16'
     &:first-child
       margin-right 10px
 
-button.facebook
-  background url($facebookIcon) center center no-repeat
-  background-size cover
+button.fi-facebook
+button.fi-twitter
   width 25px
   height 25px
+  background transparent
 
-button.twitter
-  background url($twitterIcon) center center no-repeat
-  background-size cover
-  width 25px
-  height 25px
+button.fi-facebook
+  color $fb-blue
+
+button.fi-twitter
+  color $twitter-blue
 
 .post-info__title
   font-size 24px
