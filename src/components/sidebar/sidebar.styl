@@ -20,13 +20,9 @@
 
 .sidebar-blur.visible
   display block
-  position absolute
+  position fixed
   width 100%
   height 100%
-  top 0
-  bottom 0
-  right 0
-  left 0
   background-color rgba(255, 255, 255, 0.85)
   z-index 1
 
@@ -34,21 +30,37 @@
   display none
 
 .sidebar-header
-  height 100px
+  min-height 100px
   background-color $sidebar__background-header
   position relative
+  padding-top 35px
+  box-sizing border-box
 
 .sidebar-header__logo
-  absolute-center()
+  position relative
+  margin 0 auto
+  display block
 
 .sidebar-header__subtitle
   display block
-  position absolute
-  margin 0 auto
-  right 0
-  left 0
-  bottom 0
-  width 35px
+  height 35px
+  width 100%
+  text-align center
+  line-height 35px
+  cursor default
+
+.sidebar-header__subtitle::before
+  content 'a casino'
+
+.sidebar-header__subtitle:hover
+  padding 12.5px 10px
+  box-sizing border-box
+  height 45px
+  transition all 1s
+  line-height: 15px;
+
+.sidebar-header__subtitle:hover::before
+  content 'go to casumo.com'
 
 .sidebar-logo
   height 100px
@@ -64,6 +76,9 @@
   padding 0
   width 100px
   margin 15px auto 50px
+
+.sidebar-navigation:hover
+  text-decoration underline
 
 .sidebar-navigation__item
   margin-bottom 10px
