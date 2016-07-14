@@ -56,7 +56,7 @@
   padding 12.5px 10px
   box-sizing border-box
   height 45px
-  transition all 1s
+  transition all 0.5s ease-in-out
   line-height: 15px;
 
 .sidebar-header__subtitle:hover::before
@@ -128,8 +128,35 @@
   absolute-center()
 
 .sidebar-ads__empty
-  height 190px
+  min-height 190px
   width 100%
+  padding 20px 15px 40px
+  box-sizing border-box
+
+.sidebar-ads__empty p
+  color $purple
+  margin 0
+  text-align center
+  font-size 14px
+
+.sidebar-ads__empty button
+  display block
+  margin 20px auto 0
+  color $purple
+  background transparent
+  border 2px solid $purple
+  background: transparent;
+  border-radius: 28px;
+  font-size: 16px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  width 150px
+  font-weight bold
+
+.sidebar-ads__empty button:hover
+  color white
+  border 2px solid $purple
+  background $purple
 
 .sidebar-ads__tuhoa
   background-color $sidebar-ads__background--tuhoa

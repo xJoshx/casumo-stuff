@@ -9,20 +9,23 @@
   absolute-center()
 
 .header__toggle-sidebar
+.header__close-sidebar
   width 15px
   height 15px
   absolute-center()
+  cursor pointer
+
+.header__toggle-sidebar
   right auto
   left 20px
+  color $grey--light
 
 .header__close-sidebar
   display none
-  width 15px
-  height 15px
-  absolute-center()
   right 20px
   left auto
   z-index 3
+  color $black
 
 .header__close-sidebar.visible
   display: block
