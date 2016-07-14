@@ -1,5 +1,6 @@
 - var logo = "http://placepu.gs/110/80"
 
 header.header
-  button.header__toggle-sidebar(onclick="casumoActions.toggleSidebar()")
+  button.header__toggle-sidebar#open-sidebar(onclick="casumoActions.toggleSidebar()")
   img.header__logo(src="" + logo, alt="Casumo Logo")
+  button.header__close-sidebar#close-sidebar(onclick="casumoActions.toggleSidebar()")
