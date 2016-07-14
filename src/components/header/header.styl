@@ -1,12 +1,17 @@
+@import "../../stylus/global/mixins/absolute-center"
+
 .header
   height 200px
   position relative
 
 .header__logo
   display block
-  margin auto
-  top 0
-  bottom 0
-  right 0
-  left 0
-  position absolute
+  absolute-center()
+
+.header__toggle-sidebar
+  width 15px
+  height 15px
+  absolute-center()
+  right auto
+
+@import "media"

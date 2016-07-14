@@ -1,20 +1,26 @@
 @media (min-width $desktopMedium)
-  .post
-    min-width 780px
+  .sidebar
+    display block
 
-  .post__image
-    img
-      max-height 320px
-
-@media (min-width $desktopLarge)
-  .post
-    min-width 980px
-
-  .post__image
-    img
-      max-height 400px
+// @media (min-width $desktopLarge)
+//   .post
+//     min-width 980px
+//
+//   .post__image
+//     img
+//       max-height 400px
 
 // @media (max-width $tabletLandscape)
 //
 //
 // @media (max-width $desktopLarge)
+
+@media only screen and (min-device-width $tabletPortrait) and (max-device-width $tabletLandscape)
+  .sidebar
+    position absolute
+    left -200px
+
+@media only screen and (min-device-width $mobilePortrait) and (max-device-width $mobileLandscape) and (orientation : portrait)
+  .sidebar
+    position absolute
+    left -200px
