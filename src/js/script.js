@@ -37,7 +37,7 @@ casumoActions.prototype.scrollEffect = function (event) {
     goTop = document.getElementById('go-top'),
     sidebarHeight = 900,
     screenWidth = 768,
-    screenWidthGoTop = 480
+    screenWidthGoTop = 568
 
     // Sidebat scroll effect
     if(window.screen.width >= screenWidth) {
@@ -48,7 +48,7 @@ casumoActions.prototype.scrollEffect = function (event) {
       }
     }
 
-    if(window.screen.width < screenWidthGoTop) {
+    if(window.screen.width <= screenWidthGoTop) {
       if (top > 200) {
         goTop.className = 'more go-top visible'
       } else {
