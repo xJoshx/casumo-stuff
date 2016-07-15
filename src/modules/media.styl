@@ -1,4 +1,4 @@
-@media (min-width $mobilePortrait) and (max-width $tabletPortrait)
+@media (min-width $mobilePortrait) and (max-width $tabletPortrait) and (orientation : portrait)
   .content
     width 100%
     min-width 320px
@@ -15,3 +15,10 @@
     max-width: 475px;
     margin: 0 auto;
     padding-left: 200px;
+
+
+@media (min-width $mobilePortrait) and (max-width $tabletPortrait) and (orientation : landscape)
+  .content
+    width 100%
+    min-width 320px
+    padding-left 0

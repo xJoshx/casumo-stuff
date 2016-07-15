@@ -15,4 +15,29 @@
     height 16px
     color $white
 
+.fi-arrow-down.inverted
+  transform rotate(180deg)
+
+.more.go-top
+  opacity 0
+  visibility hidden
+  position fixed
+  right 0
+  left 0
+  margin 0 auto
+  top -50px
+  z-index 9
+
+.more.go-top.visible
+  opacity 1
+  visibility visible
+  transform translateY(100px)
+  transition all 0.3s ease-out
+
+.more.go-top.hidden
+  opacity 0
+  visibility hidden
+  transform translateY(-100px)
+  transition all 0.3s ease-out
+
 @import "media"

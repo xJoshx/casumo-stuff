@@ -36,9 +36,12 @@ casumoActions.prototype.scrollEffect = function (event) {
     var top  = window.pageYOffset || document.documentElement.scrollTop,
     sidebarItems = document.getElementById('sidebar-scroll-effect'),
     sidebar = document.getElementById('sidebar'),
-    sidebarHeight = 900
-    screenWidth = 768
+    goTop = document.getElementById('go-top'),
+    sidebarHeight = 900,
+    screenWidth = 768,
+    screenWidthGoTop = 480
 
+    // Sidebat scroll effect
     if(window.screen.width >= screenWidth) {
       if (top < 590) {
         var translate = 'translateY(-' + top + 'px)'
@@ -46,6 +49,23 @@ casumoActions.prototype.scrollEffect = function (event) {
         sidebar.style.height = sidebarHeight - top + 'px'
       }
     }
+
+    if(window.screen.width < screenWidthGoTop) {
+      if (top > 200) {
+        goTop.className = 'more go-top visible'
+      } else {
+        goTop.className = 'more go-top hidden'
+      }
+    }
+
+    // Toggle go top in mobile
+    // if(top > 200) {
+    //   goTop.className = 'more go-top visible'
+    //   classIsSet = true
+    // } else(top <= 200 ) {
+    //   goTop.className = 'more go-top'
+    //   classIsSet = false
+    // }
   })
 }
 
