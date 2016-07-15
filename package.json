@@ -1,7 +1,7 @@
 {
   "name": "casumo",
   "version": "1.0.0",
-  "description": "The only dependencies in this project are pug and normalize.css",
+  "description": "The only dependencies in this project are pug and normalize.css, apart from the gulp stuff",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
