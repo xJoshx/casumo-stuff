@@ -34,11 +34,14 @@ casumoActions.prototype.scrollEffect = function (event) {
     sidebarItems = document.getElementById('sidebar-scroll-effect'),
     sidebar = document.getElementById('sidebar'),
     sidebarHeight = 900
+    screenWidth = 1126
 
-    if (top < 590) {
-      var translate = 'translateY(-' + top + 'px)'
-      sidebarItems.style.transform = translate
-      sidebar.style.height = sidebarHeight - top + 'px'
+    if(window.screen.width >= screenWidth) {
+      if (top < 590) {
+        var translate = 'translateY(-' + top + 'px)'
+        sidebarItems.style.transform = translate
+        sidebar.style.height = sidebarHeight - top + 'px'
+      }
     }
   })
 }
