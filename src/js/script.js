@@ -1,6 +1,4 @@
-function casumoActions () {
-
-};
+function casumoActions () {};
 
 casumoActions.prototype.toggleSidebar = function (event) {
   var sidebar = document.getElementById('sidebar'),
@@ -69,7 +67,19 @@ casumoActions.prototype.scrollEffect = function (event) {
   })
 }
 
+casumoActions.prototype.setElevator = function (event) {
+  window.onload = function() {
+  // Just for the lol
+    var elevator = new Elevator({
+      element: document.getElementById('go-top'),
+      mainAudio: './assets/music/elevator.mp3',
+      endAudio: './assets/music/ding.mp3'
+    });
+  }
+}
+
 var casumoActions = new casumoActions()
 
 casumoActions.listenToClicksBlur(casumoActions.toggleSidebar)
 casumoActions.scrollEffect()
+casumoActions.setElevator()
