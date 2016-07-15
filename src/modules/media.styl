@@ -4,14 +4,14 @@
     min-width 320px
     padding-left 0
 
-// @media (min-width $desktopSmall)
-//   .header__toggle-sidebar
-//     display none
+@media (min-width $tabletPortrait) and (max-width $tabletLandscape)
+  .content
+    padding-left 200px
+    width 80%
+    min-width 0
 
-
-// @media (max-width $tabletLandscape)
-//
-//
-// @media (max-width $desktopLarge)
-
-// @media only screen and (min-device-width $tabletPortrait) and (max-device-width $tabletLandscape)
+@media (min-width 489px) and (max-width $tabletPortrait)
+  .content
+    max-width: 475px;
+    margin: 0 auto;
+    padding-left: 200px;
